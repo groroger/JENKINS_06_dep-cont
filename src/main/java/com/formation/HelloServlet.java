@@ -25,5 +25,4 @@ public class HelloServlet extends HttpServlet{
 		doGet(request, response);
 	}
 
-	// sdfgiop
 }
