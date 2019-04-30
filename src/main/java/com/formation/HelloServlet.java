@@ -2,8 +2,8 @@ package com.formation;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.rmi.ServerException;
 
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -14,13 +14,13 @@ public class HelloServlet extends HttpServlet{
 
 	private static final long serialVersionUID = 1L;
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServerException, IOException
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
 		PrintWriter writer = response.getWriter();
 		writer.println("Hello from HelloServlet!");
 	}
 	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServerException, IOException
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
 		doGet(request, response);
 	}
